@@ -2,5 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  @apply bg-blue-500 p-12;
+  @apply m-0;
+  @apply p-0;
 }
