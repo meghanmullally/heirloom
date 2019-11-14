@@ -2,31 +2,73 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-3">
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <span className="font-semibold text-xl tracking-tight">Heirloom</span>
-      </div>
-      <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div className="text-sm lg:flex-grow">
+    <div className="bg-gray-100 font-sans w-full m-0 mb-2">
+    <div className="bg-white shadow">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between py-4">
+          <div>
+            <Link href="/">
+              <a><span className="font-semibold text-xl tracking-tight">Heirloom</span></a>
+            </Link>
+          </div>
+  
+          <div className="hidden sm:flex sm:items-center">
             <Link href="/recipes">
-                <a className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-                    Recipes
-                </a>
+              <a className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Recipe</a>
             </Link>
+            <Link href="/recipes">
+              <a className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Recipe</a>
+            </Link>
+            <Link href="/recipes">
+              <a className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Recipe</a>
+            </Link>
+            <Link href="/recipes">
+              <a className="text-gray-800 text-sm font-semibold hover:text-purple-600">Recipe</a>
+            </Link>
+          </div>
+  
+          <div className="hidden sm:flex sm:items-center">
+            <Link href="signin">
+              <a  className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Sign in</a>
+            </Link>
+            <Link href="signup">  
+              <a className="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg hover:text-purple-600 hover:border-purple-600">Sign up</a>
+            </Link>
+          </div>
+  
+          <div className="sm:hidden cursor-pointer">
+            <span className="font-semibold text-xl tracking-tight">Heirloom</span>
+          </div>
         </div>
-        <div>
-            <Link href="/signin">
-                <a className="inline-block text-sm px-2 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
-                    Sign In
-                </a>
+        
+        <div className="block sm:hidden bg-white border-t-2 py-2">
+          <div className="flex flex-col">
+            <Link href="/recipes">
+              <a className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Recipe</a>
             </Link>
-            <Link href="/signup">
-                <a className="ml-2 inline-block text-sm px-2 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
-                    Sign Up
-                </a>
+            <Link href="/recipes">
+              <a className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Recipe</a>
             </Link>
+            <Link href="/recipes">
+              <a className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Recipe</a>
+            </Link>
+            <Link href="/recipes">
+              <a className="text-gray-800 text-sm font-semibold hover:text-purple-600">Recipe</a>
+            </Link>
+            <div className="flex justify-between items-center border-t-2 pt-2">
+              <Link href="signin">
+                <a  className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4">Sign in</a>
+              </Link>
+              <Link href="signup">  
+                <a className="text-gray-800 text-sm font-semibold border px-4 py-2 rounded-lg hover:text-purple-600 hover:border-purple-600">Sign up</a>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </div>
   );
 }
+
+
